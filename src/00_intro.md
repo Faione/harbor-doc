@@ -1,11 +1,16 @@
 # harbor
 
 - [harbor](#harbor)
+  - [harbor arch](#harbor-arch)
   - [install by helm](#install-by-helm)
   - [proxy to get helm images](#proxy-to-get-helm-images)
-  - [harbor 仓库构成](#harbor-仓库构成)
+  - [harbor仓库构成](#harbor仓库构成)
   - [harbor接口](#harbor接口)
   - [harbor cli](#harbor-cli)
+
+## harbor arch
+
+![harbor arch](./img/2023-02-14-16-17-09.png)
 
 ## install by helm
 
@@ -48,13 +53,12 @@ for image in chartmuseum-photon redis-photon trivy-adapter-photon notary-server-
 docker load -i ${image}.tar.gz ;done
 ```
 
-## harbor 仓库构成
+## harbor仓库构成
 
 registry(default harbor, add by proxy)
 - project
   - repository
     - artifact
-
 ## harbor接口
 
 harbor 接口入口
